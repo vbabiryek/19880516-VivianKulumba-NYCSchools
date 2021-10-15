@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">19880516-VivianKulumba-NYCSchools</string>
+    <string name="school_name">School name: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
