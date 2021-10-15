@@ -1,12 +1,14 @@
 package com.example.a19880516_viviankulumba_nycschools.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.a19880516_viviankulumba_nycschools.MainActivity;
 import com.example.a19880516_viviankulumba_nycschools.R;
 import com.example.a19880516_viviankulumba_nycschools.fragments.MoreInfoDialogFrag;
 import com.example.a19880516_viviankulumba_nycschools.models.NYCHighSchools;
