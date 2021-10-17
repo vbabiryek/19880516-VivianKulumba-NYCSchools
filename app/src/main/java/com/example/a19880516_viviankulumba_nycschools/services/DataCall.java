@@ -21,7 +21,10 @@ public class DataCall {
         request = RetrofitBuild.getRetrofitInstance().create(SchoolsRequest.class);
     }
 
-
+    /* Here are our REST calls for both the school's data and the school's SAT data.
+    * This method handles the response or failure of our GET request
+    * where we initialize our data object to the response body of the call if it's not null.
+    * If it is null, we initialize our response body to null and log output notifying the failure. */
     public LiveData<List<NYCHighSchools>> getSchools(){
         final MutableLiveData<List<NYCHighSchools>> schoolsData = new MutableLiveData<>();
         request.getSchools().enqueue(new Callback<List<NYCHighSchools>>() {
@@ -42,6 +45,7 @@ public class DataCall {
         });
         return schoolsData;
     }
+
 
     public LiveData<List<SATScores>> getScores(){
         final MutableLiveData<List<SATScores>> scoresData = new MutableLiveData<>();

@@ -7,7 +7,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
-
+/* This is where we make our REST requests */
 public interface SchoolsRequest {
 
     @GET("/resource/s3k6-pzi2.json")

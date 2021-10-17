@@ -31,13 +31,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /* Here we initialize our views */
         recyclerView = findViewById(R.id.recyclerView);
         progressBar = findViewById(R.id.progressBar);
         linearLayoutManager = new LinearLayoutManager(this);
-        adapter = new DataAdapter(nycHighSchoolsArrayList, satScoresArrayList, this);
+        adapter = new DataAdapter(nycHighSchoolsArrayList, satScoresArrayList);
         highSchoolViewModel = new ViewModelProvider(this).get(HighSchoolViewModel.class);
         satScoresViewModel = new ViewModelProvider(this).get(SATScoresViewModel.class);
 
+        /* Here we set a Runnable to set our recycler view up on a background thread to avoid too much
+        * work happening on the main thread. */
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
@@ -54,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         getScoresResponse();
     }
 
+    /* This method gets the school's data from View Model */
     private void getSchoolsResponse(){
         highSchoolViewModel.getHighSchoolResponseLiveData().observe(this, nycHighSchools -> {
             if(nycHighSchools != null){
@@ -66,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /* This method gets the school's SAT data from View Model */
     private void getScoresResponse(){
         satScoresViewModel.getSATScoresResponseLiveData().observe(this, satScores -> {
             if(satScores != null){

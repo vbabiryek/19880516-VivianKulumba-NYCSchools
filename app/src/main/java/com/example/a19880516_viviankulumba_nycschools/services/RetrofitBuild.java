@@ -5,6 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import static com.example.constants.Constants.BASE_URL;
 
+/*This class builds our Retrofit instance and completes our network service for REST calls.*/
 public class RetrofitBuild {
     private static Retrofit retrofit;
 
