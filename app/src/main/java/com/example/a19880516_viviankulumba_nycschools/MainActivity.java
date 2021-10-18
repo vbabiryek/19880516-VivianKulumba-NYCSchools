@@ -5,13 +5,14 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 import com.example.a19880516_viviankulumba_nycschools.adapters.DataAdapter;
 import com.example.a19880516_viviankulumba_nycschools.models.NYCHighSchools;
 import com.example.a19880516_viviankulumba_nycschools.models.SATScores;
+import com.example.a19880516_viviankulumba_nycschools.viewmodels.HighSchoolViewModel;
+import com.example.a19880516_viviankulumba_nycschools.viewmodels.SATScoresViewModel;
 
 import java.util.ArrayList;
 

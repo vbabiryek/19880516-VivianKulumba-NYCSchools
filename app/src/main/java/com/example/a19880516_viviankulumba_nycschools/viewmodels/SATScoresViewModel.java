@@ -1,4 +1,4 @@
-package com.example.a19880516_viviankulumba_nycschools;
+package com.example.a19880516_viviankulumba_nycschools.viewmodels;
 
 import android.app.Application;
 
